@@ -6,49 +6,46 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1094</width>
+    <width>889</width>
     <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>QCHECKBOX_3</string>
+   <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>392</x>
-      <y>230</y>
-      <width>161</width>
-      <height>28</height>
+      <x>110</x>
+      <y>70</y>
+      <width>77</width>
+      <height>76</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Check</string>
-    </property>
-   </widget>
-   <widget class="QCheckBox" name="checkBox">
-    <property name="geometry">
-     <rect>
-      <x>360</x>
-      <y>140</y>
-      <width>401</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>15</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Do you like Apples</string>
-    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QCheckBox" name="chkbx_1">
+       <property name="text">
+        <string>Option 1</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="chkbx_2">
+       <property name="text">
+        <string>Option 2</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="chkbx_3">
+       <property name="text">
+        <string>Option 3</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -56,7 +53,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1094</width>
+     <width>889</width>
      <height>26</height>
     </rect>
    </property>

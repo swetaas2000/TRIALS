@@ -1,40 +1,41 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include<QMessageBox>
+#include<QTextStream>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->checkBox->setChecked(true);
+    connect(ui->chkbx_1,SIGNAL(clicked(bool)),this,SLOT(onchkbx_clicked()));
+    connect(ui->chkbx_2,SIGNAL(clicked(bool)),this,SLOT(onchkbx_clicked()));
+    connect(ui->chkbx_3,SIGNAL(clicked(bool)),this,SLOT(onchkbx_clicked()));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-
-
-void MainWindow::on_pushButton_clicked()
-{
-    if(ui->checkBox->isChecked()){
-        QMessageBox::information(this,"212218104169_Swetaa","Yes user like Apples");
+void MainWindow::onchkbx_clicked(){
+    QTextStream stream(stdout);
+    if(ui->chkbx_1->isChecked())
+    {
+        stream<<"\nOption 1 is Checked";
     }
     else{
-        QMessageBox::information(this,"212218104169_Swetaa","No user don't like Apples");
+        stream<<"\nOption 1 is UnChecked";
     }
+    if(ui->chkbx_2->isChecked())
+    {
+        stream<<"\nOption 2 is Checked";
+    }
+    else{
+        stream<<"\nOption 2 is UnChecked";
+    }if(ui->chkbx_3->isChecked())
+    {
+        stream<<"\nOption 3 is Checked";
+    }
+    else{
+        stream<<"\nOption 3 is UnChecked";
+    }
+
 }
-
-
-void MainWindow::on_checkBox_stateChanged(int arg1)
-{
-    if(arg1)
-    {
-        QMessageBox::information(this,"212218104169_Swetaa","Yes user like Apples");
-    }
-    else
-    {
-        QMessageBox::information(this,"212218104169_Swetaa","No user don't like Apples");
-    }
-    }
-
